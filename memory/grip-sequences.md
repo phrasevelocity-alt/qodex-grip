@@ -112,12 +112,20 @@ cat HERALD.md | tail -200        # last Sunday's report
 
 ## Status
 
-- [ ] qodex-grip repo created
-- [ ] grip_past.md seeded
-- [ ] grip_future.md seeded
-- [ ] Watchman trigger created (6:17am GT daily)
-- [ ] Herald trigger created (Sunday 7:00am GT weekly)
-- [ ] First snapshots pushed to repo
+- [x] qodex-grip repo created — https://github.com/phrasevelocity-alt/qodex-grip
+- [x] grip_past.md seeded (empty frame)
+- [x] grip_future.md seeded (empty frame)
+- [x] Watchman trigger created — **trig_013e76DPUbcmti2A9gUnPToq** — first run 2026-04-19 12:17 UTC
+- [x] Herald trigger created — **trig_01Xw6ttvh6dCN6gCeGxuVjCw** — first run 2026-04-19 13:00 UTC (tomorrow, Sunday)
+- [x] First snapshots pushed to repo
+- [x] Daily Planet wired (~/codects/streams/planet/generate.sh Apps Desk section)
 - [ ] First run verified
 
-Until triggers are wired, R or any agent can invoke the Grip manually with the Watchman prompt to test the shape.
+## Trigger manifest
+
+| Sequence | Trigger ID | First run | Cron (UTC) | Local (GT) |
+|---|---|---|---|---|
+| Watchman | `trig_013e76DPUbcmti2A9gUnPToq` | 2026-04-19 12:17 UTC | `17 12 * * *` | daily 6:17am |
+| Herald | `trig_01Xw6ttvh6dCN6gCeGxuVjCw` | 2026-04-19 13:00 UTC | `0 13 * * 0` | Sundays 7:00am |
+
+Manage at https://claude.ai/code/scheduled. Run-now or edit via the RemoteTrigger API.
